@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,900&family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family:'Bodoni Moda', serif;
+    font-size : 1.2rem;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(to right, #041308, #0b3317);
+}
+.left-text {
+    flex-basis: 30%;
+
+}
+.gallery {
+    flex-basis: 50%;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 120px;
+}
+.heading {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+.subheading {
+    color: #ddd;
+    margin-top: 10px;
+    text-align: center;
+}
+.author {
+    color: white;
+    margin-top: 50px;
+    margin-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.box {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: revert;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+.col-2 {
+    grid-column: span 2;
+}
+.row-2 {
+    grid-row: span 2;
+}
+.box {
+    
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.201); /* Change the color and opacity as desired */
+    transition: opacity 1s ease;
+    
+}
+
+.box:hover::after {
+    opacity: 1;
+    
+}
+/* Add the following CSS to your style.css file */
+
+.box {
+    /* existing styles */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: scale(1.1); /* Change the scaling factor as desired */
+  }
+  
